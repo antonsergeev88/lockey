@@ -2,7 +2,9 @@ import ArgumentParser
 
 @main
 struct Lockey: AsyncParsableCommand {
-    func run() async throws {
-        print("Hello, world!")
-    }
+    static let configuration = CommandConfiguration(
+        subcommands: [
+            Status.self,
+        ]
+    )
 }
